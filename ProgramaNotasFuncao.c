@@ -1,10 +1,10 @@
-/* Faça um programa que receba 2 notas do aluno.
-	Crie uma função para consistir essas notas (somente aceite nota entre 0 e 10). // Feito
-	Crie uma função para calcular a média e outra função para verificar a situação
-	do aluno. Se o aluno tiver média menor que 3, deve aparecer a mensagem
-	“Reprovado”, senão, se a média for entre 3 e 7, deve aparecer a mensagem
-    “Aluno em Exame”. Para os que tiverem média maior ou igual a 7 deve
-	aparecer “Aprovado”. */
+/* FaÃ§a um programa que receba 2 notas do aluno.
+	Crie uma funÃ§Ã£o para consistir essas notas (somente aceite nota entre 0 e 10). // Feito
+	Crie uma funÃ§Ã£o para calcular a mÃ©dia e outra funÃ§Ã£o para verificar a situaÃ§Ã£o
+	do aluno. Se o aluno tiver mÃ©dia menor que 3, deve aparecer a mensagem
+	â€œReprovadoâ€, senÃ£o, se a mÃ©dia for entre 3 e 7, deve aparecer a mensagem
+    â€œAluno em Exameâ€. Para os que tiverem mÃ©dia maior ou igual a 7 deve
+	aparecer â€œAprovadoâ€. */
 	
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,11 +16,14 @@
  
  int main() {
   	setlocale(LC_ALL, "portuguese"); 
+  	system("Color 50");
 	float n1, n2; 
-	n1 = ValidarNotas(); // A função ValidarNotas() receberá os valores válidos 
+	n1 = ValidarNotas(); // A funÃ§Ã£o ValidarNotas() receberÃ¡ os valores vÃ¡lidos 
 	n2 = ValidarNotas(); 
 	printf("\nNotas: %.1f %.1f", n1, n2); 
-	printf("\nA media será: %.1f", MediaNotas(n1, n2));
+	printf("\nA media serÃ¡: %.1f", MediaNotas(n1, n2));
+	
+	
 	
 	
 	system("pause"); 
@@ -35,9 +38,9 @@
 			scanf("%f", &nota); 
 			
 		} while (nota < 0 || nota > 10); 
-		printf("\nNota Válida \n"); 
+		printf("\nNota VÃ¡lida \n"); 
 		
-		return nota; //nota é float então a função é do tipo float 
+		return nota; //nota Ã© float entÃ£o a funÃ§Ã£o Ã© do tipo float 
 	}
 	
 	float MediaNotas(float n1, float n2)
@@ -53,11 +56,11 @@
 	void SitAluno(float Media) {
 		
 		if(Media < 3){
-			printf("\nReprovado");
+			printf("\nSituaÃ§Ã£o do aluno: Reprovado");
 		} else if (Media >= 3 && Media < 7) {
-			printf("\nAluno em exame");
+			printf("\nSituaÃ§Ã£o do aluno: Aluno em exame");
 		} else {
-			printf("\nAprovado");
+			printf("\nSituaÃ§Ã£o do aluno: Aprovado");
 		}
 	}
 	
